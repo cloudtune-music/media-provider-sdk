@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "media-provider-sdk"
+dynamic = ["version"]
+
+description = "Provider SDK for Media Provider Server plugins"
+readme = "README.md"
+
+requires-python = ">=3.12"
+
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+
+authors = [
+    { name = "CloudTune" }
+]
+
+keywords = [
+    "media",
+    "provider",
+    "plugin",
+    "sdk"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Typing :: Typed",
+]
+
+dependencies = []
+
+
+[tool.hatch.version]
+path = "src/media_provider_sdk/version.py"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/media_provider_sdk"]
